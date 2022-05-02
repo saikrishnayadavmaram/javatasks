@@ -1,0 +1,23 @@
+package StringReverse;
+
+import java.util.Arrays;
+import java.util.LinkedHashSet;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+
+public class StringReverse {
+
+	public static void main(String[] args) {
+		String my_str = "This is a is sample a sample only.";
+		my_str = Arrays.stream(my_str.split("\\s+")).distinct().collect(Collectors.joining(" "));
+		System.out.println(my_str);
+		
+		for (int i = 0; i < StringReverse.length; i++) {
+	         if (i == StringReverse.length - 1)
+	          my_str = StringReverse[i] + my_str ;
+	         else
+	        	 my_str = " " + StringReverse[i] + my_str;
+	      }
+	      System.out.println(my_str);
+	}
+}

@@ -1,0 +1,24 @@
+package StringReverse;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class StringReverse {
+
+	public static void main(String[] args) {
+		
+		String fullString = "lol lol";
+		String[] words = fullString.split("\\W+");
+		StringBuilder stringBuilder = new StringBuilder();
+		Set<String> wordsHashSet = new HashSet<>();
+
+		for (String word : words) {
+		    if (wordsHashSet.contains(word.toLowerCase())) continue;
+		    wordsHashSet.add(word.toLowerCase());
+		    stringBuilder.append(word).append(" ");
+		}
+		String nonDuplicateString = stringBuilder.toString().trim();
+
+	}
+
+}
